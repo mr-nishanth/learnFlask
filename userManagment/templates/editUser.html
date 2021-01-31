@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update User Details</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='style.css')}}">
+</head>
+<body>
+    <h1>Update User Details</h1>
+    <form action="" method="post">
+        <label for="name">NAME : </label>
+        <input type="text" name="name" id="name" value="{{ datas.NAME }}" required>
+        <label for="age">AGE : </label>
+        <input type="text" name="age" id="age" value="{{ datas.AGE}}" required>
+        <label for="city">CITY : </label>
+        <input type="text" name="city" id="city" value="{{ datas.CITY }}" required>
+        <input type="submit" value="Update Details">
+    </form>
+</body>
+</html>
