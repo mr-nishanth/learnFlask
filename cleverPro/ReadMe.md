@@ -21,18 +21,17 @@
 ### Create
 
 
-![Preview](https://github.com/JOKER-NISHANTH/learnFlask/blob/master/cleverPro/ImgCP/add.png)
+![Preview](https://github.com/JOKER-NISHANTH/learnFlask/blob/master/cleverPro/imgCP/create.png)
 
-### Create
+### Read
 
-
-![Preview](https://github.com/JOKER-NISHANTH/learnFlask/blob/master/cleverPro/ImgCP/read.png)
+![Read img](https://github.com/JOKER-NISHANTH/learnFlask/blob/master/cleverPro/imgCP/read.png)
 
 
 ### Update
 
-![Preview](https://github.com/JOKER-NISHANTH/learnFlask/blob/master/cleverPro/ImgCP/update.png)
+![Update img](https://github.com/JOKER-NISHANTH/learnFlask/blob/master/cleverPro/imgCP/update.png)
 
 ### Delete
 
-![Preview](https://github.com/JOKER-NISHANTH/learnFlask/blob/master/cleverPro/ImgCP/delete.png)
+![Delete img](https://github.com/JOKER-NISHANTH/learnFlask/blob/master/cleverPro/imgCP/delete.png)
