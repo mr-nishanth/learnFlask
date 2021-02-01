@@ -13,11 +13,21 @@ Flask is a micro web framework written in Python. It is classified as a microfra
 
 
 <hr>
+
+
 ### 1.Simple CRUD page
+
+
 
 ![CRUD](https://github.com/JOKER-NISHANTH/learnFlask/blob/master/Img/intro.png)
 
+
+
+
+
 <hr>
+
+
 ### 2.Simple BLOG page
 
-![BLOG](https://github.com/JOKER-NISHANTH/learnFlask/blob/master/cleverPro/imgCP/intro.png)
+![BLOG](https://github.com/JOKER-NISHANTH/learnFlask/blob/master/cleverPro/imgCP/Intro.png)
