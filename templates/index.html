@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- CSS -->
+    <link rel="stylesheet" href="{{ url_for('static',filename='style.css') }}">
+    <!-- Inbuilt Bootstrap CSS -->
+    <link rel="stylesheet" href="{{ url_for('static',filename='bootstrap.min.css') }}">
+
+    <!-- Bootstrap CSS
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        -->
+    <title>title</title>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <div id="navbar">
+        <h1> {{ title }} </h1>
+    </div>
+
+    <div class="container">
+        {% if update_todo %}
+        <!-- form:post.form-group (mt-4=margin top 4px)-->
+        <!--  .update = now calling the update func and pass the update_todo.id (id) as arg for update func parameter -->
+        <form action=" {{ url_for('.update',id=update_todo.id)}} " class="from-group mt-4 form-inline" method="post">
+
+            <!-- input.form-control.form-control-md -->
+            <input type="text" name="task" placeholder="Update the task ... " class="form-control form-control-md m-2"
+                value="{{ update_todo.task }}" required>
+            <button class=" btn btn-md btn-outline-info" type="submit"> Update task </button>
+        </form>
+        {% else %}
+
+        <!-- .add = crt add func -->
+        <form action=" {{ url_for('.add')}} " class="from-group mt-4 form-inline" method="post">
+
+            <!-- input.form-control.form-control-md -->
+            <input type="text" name="task" placeholder="Enter any task ... " class="form-control form-control-md m-2"
+                required>
+            <button class=" btn btn-md btn-outline-primary" type="submit"> Add task </button>
+        </form>
+
+
+        {% endif %}
+    </div>
+
+    <!-- Table Start-->
+    <div class="container">
+        <!-- d-flex justify-content-center -->
+        <table class="table text-center table-bordered">
+            <tr>
+                <th>
+                    ID
+                </th>
+                <th>
+                    Task
+                </th>
+                <th>
+                    Date Time
+                </th>
+                <th>
+                    Action
+                </th>
+            </tr>
+            <!-- Heading end -->
+            {% for todo in todos %}
+
+            <tr>
+                <td>
+                    {{ todo.id }}
+                </td>
+                <td>
+                    {{ todo.task }}
+                </td>
+                <td>
+                    {{ todo.date }}
+                </td>
+                <td>
+                    <!-- .update denote calling crt update  function -->
+                    <a class="btn btn-outline-success mr-2" href="{{ url_for('.update',id=todo.id) }}">Update</a>
+
+                    <!-- id=todo.id => passing dynamic id for delete function , here id=todo.id is like func arg -->
+                    <a class="btn btn-outline-danger ml-2" href="{{ url_for('.delete',id=todo.id)}}">Delete</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+    <!-- Table End -->
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
